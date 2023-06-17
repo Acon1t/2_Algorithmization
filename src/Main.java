@@ -21,6 +21,12 @@ public class Main {
         //ArraysOfArrays.task7();
         //ArraysOfArrays.task8();
         //ArraysOfArrays.task9();
-        ArraysOfArrays.task10();
+        //ArraysOfArrays.task10();
+        //ArraysOfArrays.task11();
+        //ArraysOfArrays.task12();
+        //ArraysOfArrays.task13();
+        //ArraysOfArrays.task14();
+        //ArraysOfArrays.task15();
+        //ArraysOfArrays.task16();
     }
 }
