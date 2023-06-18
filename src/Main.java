@@ -28,5 +28,13 @@ public class Main {
         //ArraysOfArrays.task14();
         //ArraysOfArrays.task15();
         //ArraysOfArrays.task16();
+        //OneDimensionalArraysSorting.task1();
+        //OneDimensionalArraysSorting.task2();
+        //OneDimensionalArraysSorting.task3();
+        //OneDimensionalArraysSorting.task4();
+        //OneDimensionalArraysSorting.task5();
+        //OneDimensionalArraysSorting.task6();
+        //OneDimensionalArraysSorting.task7();
+        OneDimensionalArraysSorting.task8();
     }
 }
