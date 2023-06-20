@@ -251,7 +251,7 @@ public class OneDimensionalArrays {
             num[i] = scan.nextInt();
         }
         System.out.println("----------------------");
-        int count=1;
+        int count = 1;
         for (int i = 0; i < num.length; i++) {
             if (i % 2 != 0)
                 num[i] = 0;

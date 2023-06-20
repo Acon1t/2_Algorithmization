@@ -35,6 +35,16 @@ public class Main {
         //OneDimensionalArraysSorting.task5();
         //OneDimensionalArraysSorting.task6();
         //OneDimensionalArraysSorting.task7();
-        OneDimensionalArraysSorting.task8();
+        //OneDimensionalArraysSorting.task8();
+        //DecompositionUsingMethods.task1();
+        //DecompositionUsingMethods.task2();
+        //DecompositionUsingMethods.task3();
+        //DecompositionUsingMethods.task4();
+        //DecompositionUsingMethods.task5();
+        //DecompositionUsingMethods.task6();
+        //DecompositionUsingMethods.task7();
+        //DecompositionUsingMethods.task8();
+        //DecompositionUsingMethods.task9();
+        DecompositionUsingMethods.task10();
     }
 }

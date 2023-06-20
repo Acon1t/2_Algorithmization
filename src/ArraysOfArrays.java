@@ -525,6 +525,7 @@ public class ArraysOfArrays {
             System.out.println();
         }
     }
+
     public static void task16() {
         System.out.println("Сформировать случайную матрицу m x n, состоящую из нулей и единиц, причем в каждом столбце число\n" +
                 "единиц равно номеру столбца.");
@@ -546,8 +547,10 @@ public class ArraysOfArrays {
             System.out.println();
         }
     }
-    private static int [][] oddMagicSquare (int n){
-        int [][] matrix = new int[n][n];
+
+    //used in task 16
+    private static int[][] oddMagicSquare(int n) {
+        int[][] matrix = new int[n][n];
         int i = 0;
         int j = (n - 1) / 2;
         matrix[i--][j++] = 1;
@@ -570,8 +573,10 @@ public class ArraysOfArrays {
         }
         return matrix;
     }
-    private static int [][] evenMagicSquare (int n){
-        int [][] matrix = new int[n][n];
+
+    //used in task 16
+    private static int[][] evenMagicSquare(int n) {
+        int[][] matrix = new int[n][n];
         int temp;
         int k = 1;
 
@@ -582,7 +587,7 @@ public class ArraysOfArrays {
             }
         }
 
-        for (int i = 0; i < n; i += 4 ) {
+        for (int i = 0; i < n; i += 4) {
             for (int j = 1; j < n; j += 4) {
                 matrix[i][j] = n * n + 1 - matrix[i][j];
                 matrix[i + 3][j] = n * n + 1 - matrix[i + 3][j];
@@ -590,7 +595,7 @@ public class ArraysOfArrays {
                 matrix[i + 3][j + 1] = n * n + 1 - matrix[i + 3][j + 1];
             }
         }
-        for (int i = 1; i < n; i += 4 ) {
+        for (int i = 1; i < n; i += 4) {
             for (int j = 0; j < n; j += 4) {
                 matrix[i][j] = n * n + 1 - matrix[i][j];
                 matrix[i + 1][j] = n * n + 1 - matrix[i + 1][j];
@@ -600,9 +605,11 @@ public class ArraysOfArrays {
         }
         return matrix;
     }
-    private static int [][] evenOddMagicSquare (int n){
-        int [][] matrix = new int[n][n];
-        int [][] squareT = evenMagicSquare(n - 2);
+
+    //used in task 16
+    private static int[][] evenOddMagicSquare(int n) {
+        int[][] matrix = new int[n][n];
+        int[][] squareT = evenMagicSquare(n - 2);
         for (int i = 1; i < n - 1; i++) {
             for (int j = 1; j < n - 1; j++) {
                 matrix[i][j] = squareT[i - 1][j - 1] + 2 * (n - 1);
@@ -635,7 +642,7 @@ public class ArraysOfArrays {
             matrix[i + j + 1][0] = d - 4 * m + 1 + j;
         }
         j--;
-        for (int q = 1; q <= m / 2 - 1; q++, i++){
+        for (int q = 1; q <= m / 2 - 1; q++, i++) {
             matrix[i + j + q + 1][0] = 3 * m - 1 + q;
             matrix[i + j + q + 2][0] = d - 2 * m - q;
         }

@@ -52,7 +52,7 @@ public class OneDimensionalArraysSorting {
         System.out.println("----------------------");
         int[] num = new int[n];
         for (int i = 0; i < n; i++) {
-            num[i]= (int) (Math.random()*15);
+            num[i] = (int) (Math.random() * 15);
         }
         Arrays.sort(num);
         for (int i = 0; i < n; i++) {
@@ -65,7 +65,7 @@ public class OneDimensionalArraysSorting {
         System.out.println("----------------------");
         int[] num2 = new int[m];
         for (int i = 0; i < m; i++) {
-            num2[i]= (int) (Math.random()*15);
+            num2[i] = (int) (Math.random() * 15);
         }
         Arrays.sort(num2);
         for (int i = 0; i < m; i++) {
@@ -97,18 +97,19 @@ public class OneDimensionalArraysSorting {
             k++;
         }
     }
+
     public static void task3() {
         System.out.println("Сортировка выбором. Дана последовательность чисел a1<=a2<=...<=an.Требуется переставить элементы так,\n" +
-                        "чтобы они были расположены по убыванию. Для этого в массиве, начиная с первого, выбирается наибольший\n" +
-                        "элемент и ставится на первое место, а первый - на место наибольшего. Затем, начиная со второго, эта процедура\n" +
-                        "повторяется. Написать алгоритм сортировки выбором.");
+                "чтобы они были расположены по убыванию. Для этого в массиве, начиная с первого, выбирается наибольший\n" +
+                "элемент и ставится на первое место, а первый - на место наибольшего. Затем, начиная со второго, эта процедура\n" +
+                "повторяется. Написать алгоритм сортировки выбором.");
         System.out.println("Enter N and press <Enter>:");
         Scanner scan = new Scanner(System.in);
         int n = scan.nextInt();
         System.out.println("----------------------");
         int[] num = new int[n];
         for (int i = 0; i < n; i++) {
-            num[i]= (int) (Math.random()*15);
+            num[i] = (int) (Math.random() * 15);
         }
         Arrays.sort(num);
         for (int i = 0; i < n; i++) {
@@ -116,12 +117,12 @@ public class OneDimensionalArraysSorting {
         }
         System.out.println();
         System.out.println("----------------------");
-        for(int i = 0; i< n; i++) {
+        for (int i = 0; i < n; i++) {
             int max = num[i];
             int pos = i;
 
-            for(int j = i+1; j<n; j++) {
-                if (num[j]>max) {
+            for (int j = i + 1; j < n; j++) {
+                if (num[j] > max) {
                     max = num[j];
                     pos = j;
                 }
@@ -133,6 +134,7 @@ public class OneDimensionalArraysSorting {
             System.out.print(num[i] + " ");
         }
     }
+
     public static void task4() {
         System.out.println(" Сортировка обменами. Дана последовательность чисел a1<=a2<=...<=an.Требуется переставить числа в\n" +
                 "порядке возрастания. Для этого сравниваются два соседних числа ai и ai+1.Если ai > ai+1, то делается\n" +
@@ -144,7 +146,7 @@ public class OneDimensionalArraysSorting {
         System.out.println("----------------------");
         int[] num = new int[n];
         for (int i = 0; i < n; i++) {
-            num[i]= (int) (Math.random()*15);
+            num[i] = (int) (Math.random() * 15);
             System.out.print(num[i] + " ");
         }
         System.out.println();
@@ -155,22 +157,23 @@ public class OneDimensionalArraysSorting {
 
         while (check) {
             check = false;
-            for(int i = 0; i<(n-1);i++) {
-                if(num[i]>num[i+1]) {
+            for (int i = 0; i < (n - 1); i++) {
+                if (num[i] > num[i + 1]) {
                     min = num[i];
-                    num[i] = num[i+1];
-                    num[i+1] = min;
+                    num[i] = num[i + 1];
+                    num[i + 1] = min;
                     check = true;
                     count++;
                 }
             }
         }
-        System.out.println("Number permutable: "+count);
+        System.out.println("Number permutable: " + count);
         System.out.println("----------------------");
         for (int i = 0; i < n; i++) {
             System.out.print(num[i] + " ");
         }
     }
+
     public static void task5() {
         System.out.println("Сортировка вставками. Дана последовательность чисел a1,a2,...,an.Требуется переставить числа в\n" +
                 "порядке возрастания.Делается это следующим образом. Пусть a1,a2,...,ai- упорядоченная последовательность, т. е. a1<=a2<=...<=an.Берется следующее число ai+1 и вставляется в последовательность так, чтобы новая\n" +
@@ -183,7 +186,7 @@ public class OneDimensionalArraysSorting {
         System.out.println("----------------------");
         int[] num = new int[n];
         for (int i = 0; i < n; i++) {
-            num[i]= (int) (Math.random()*15);
+            num[i] = (int) (Math.random() * 15);
             System.out.print(num[i] + " ");
         }
         System.out.println();
@@ -193,6 +196,8 @@ public class OneDimensionalArraysSorting {
             System.out.print(num[i] + " ");
         }
     }
+
+    //used in task 5
     private static void sortingByInsert(int[] num) {
         int temp;
         for (int i = 1; i < num.length - 1; i++) {
@@ -206,6 +211,8 @@ public class OneDimensionalArraysSorting {
             }
         }
     }
+
+    //used in task 5
     private static int binarySearch(int[] num, int lastIndex, int element) {
         int j = lastIndex;
         int firstIndex = 0;
@@ -223,6 +230,7 @@ public class OneDimensionalArraysSorting {
         }
         return j;
     }
+
     public static void task6() {
         System.out.println("Сортировка Шелла. Дан массив n действительных чисел. Требуется упорядочить его по возрастанию.\n" +
                 "Делается это следующим образом: сравниваются два соседних элемента ai и ai+1.Если  ai<=ai+1, то продвигаются\n" +
@@ -234,21 +242,21 @@ public class OneDimensionalArraysSorting {
         System.out.println("----------------------");
         int[] num = new int[n];
         for (int i = 0; i < n; i++) {
-            num[i]= (int) (Math.random()*15);
+            num[i] = (int) (Math.random() * 15);
             System.out.print(num[i] + " ");
         }
         System.out.println();
         System.out.println("----------------------");
         int tmp;
         int k = 1;
-        while(k<n) {
-            if(num[k-1]<=num[k]) {
+        while (k < n) {
+            if (num[k - 1] <= num[k]) {
                 k++;
             } else {
                 tmp = num[k];
-                num[k]=num[k-1];
-                num[k-1]=tmp;
-                if(k-1>0) {
+                num[k] = num[k - 1];
+                num[k - 1] = tmp;
+                if (k - 1 > 0) {
                     k--;
                 }
             }
@@ -257,6 +265,7 @@ public class OneDimensionalArraysSorting {
             System.out.print(num[i] + " ");
         }
     }
+
     public static void task7() {
         System.out.println(" Даны две последовательности a1<=a2<=...<=an и b1<=b2<=...<=bn.Требуется указать те места, на которые нужно вставлять элементы последовательности b1<=b2<=...<=bn в первую\n" +
                 "последовательность так, чтобы новая последовательность оставалась возрастающей.\n");
@@ -266,7 +275,7 @@ public class OneDimensionalArraysSorting {
         System.out.println("----------------------");
         int[] num = new int[n];
         for (int i = 0; i < n; i++) {
-            num[i]= (int) (Math.random()*15);
+            num[i] = (int) (Math.random() * 15);
         }
         Arrays.sort(num);
         for (int i = 0; i < n; i++) {
@@ -279,7 +288,7 @@ public class OneDimensionalArraysSorting {
         System.out.println("----------------------");
         int[] num2 = new int[m];
         for (int i = 0; i < m; i++) {
-            num2[i]= (int) (Math.random()*15);
+            num2[i] = (int) (Math.random() * 15);
         }
         Arrays.sort(num2);
         for (int i = 0; i < m; i++) {
@@ -292,11 +301,12 @@ public class OneDimensionalArraysSorting {
             for (int i = minInd; i < m; i++) {
                 if (num2[i] < num[j]) {
                     minInd++;
-                    System.out.print(j+" ");
+                    System.out.print(j + " ");
                 }
             }
         }
     }
+
     public static void task8() {
         System.out.println("Даны дроби(pi qi - натуральные). Составить программу, которая приводит эти дроби к общему\n" +
                 "знаменателю и упорядочивает их в порядке возрастания");
@@ -340,6 +350,8 @@ public class OneDimensionalArraysSorting {
             System.out.print(numerator[i] + "/" + denominator[i] + " ");
         }
     }
+
+    //used in task 8
     private static int nod(int a, int b) {
         while (a != 0 && b != 0) {
             if (a > b) {
@@ -351,6 +363,7 @@ public class OneDimensionalArraysSorting {
         return a + b;
     }
 
+    //used in task 8
     private static int nok(int a, int b) {
         return a / nod(a, b) * b;
     }
