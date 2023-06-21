@@ -45,6 +45,13 @@ public class Main {
         //DecompositionUsingMethods.task7();
         //DecompositionUsingMethods.task8();
         //DecompositionUsingMethods.task9();
-        DecompositionUsingMethods.task10();
+        //DecompositionUsingMethods.task10();
+        //DecompositionUsingMethods.task11();
+        //DecompositionUsingMethods.task12();
+        //DecompositionUsingMethods.task13();
+        //DecompositionUsingMethods.task14();
+        //DecompositionUsingMethods.task15();
+        //DecompositionUsingMethods.task16();
+        DecompositionUsingMethods.task17();
     }
 }
