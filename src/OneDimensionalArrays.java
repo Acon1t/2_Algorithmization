@@ -190,7 +190,7 @@ public class OneDimensionalArrays {
             num[i] = scan.nextInt();
         }
         System.out.println("----------------------");
-        int min = 0;
+        int min = 9999;
         for (int i = 0; i < n; i++) {
             if (min > num[i]) {
                 min = num[i];
@@ -217,26 +217,28 @@ public class OneDimensionalArrays {
             num[i] = scan.nextInt();
         }
         System.out.println("----------------------");
-        Arrays.sort(num, Collections.reverseOrder());
-        int countt;
-        int k = num[1];
-        int t = 1;
-        countt = 0;
-        int count = 0;
-        for (int i = 1; i < n; i++) {
-            for (int j = 1; j < n; j++) {
-                if (num[i] == num[j])
-                    countt++;
-                count++;
+        int muchRepeat = -1;
+        int maxCount = -1;
+        for (int i = 0; i < num.length; i++) {
+            if (i != 0 && num[i] == num[0]) continue;
+            int count = 1;
+
+            if (i < num.length - 1) {
+                for (int j = i + 1; j < num.length; j++) {
+                    if (num[i] == num[j]) {
+                        count = count + 1;
+                        num[j] = num[0];
+                    }
+                }
             }
-            if (((t == countt) && (k > num[i])) || (t < countt)) {
-                k = num[i];
-                t = countt;
+            if (maxCount < count) {
+                maxCount = count;
+                muchRepeat = num[i];
+            } else if (maxCount == count && muchRepeat > num[i]) {
+                muchRepeat = num[i];
             }
-            countt = 0;
-            count = 0;
         }
-        System.out.print("The most common smallest number = " + k + " How many times meets = " + t);
+        System.out.println(muchRepeat);
     }
 
     public static void task10() {

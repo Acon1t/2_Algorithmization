@@ -10,7 +10,7 @@ public class Main {
         //OneDimensionalArrays.task6();
         //OneDimensionalArrays.task7();
         //OneDimensionalArrays.task8();
-        //OneDimensionalArrays.task9();
+        OneDimensionalArrays.task9();
         //OneDimensionalArrays.task10();
         //ArraysOfArrays.task1();
         //ArraysOfArrays.task2();
